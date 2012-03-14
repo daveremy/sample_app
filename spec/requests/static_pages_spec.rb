@@ -7,6 +7,7 @@ describe "StaticPages" do
       page.should have_selector('h1', :text => 'Sample App')
     end
     it "should have the right title" do
+      p "has select title? " + page.has_selector?('title').to_s
       visit '/static_pages/home'
       page.should have_selector('title',
                                 :text => "| Home")
